@@ -2,7 +2,6 @@
 
 members = [
     "server",
-    "client",
 ]
 
 # The development profile, used for `cargo build`.
