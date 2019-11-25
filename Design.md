@@ -39,6 +39,8 @@
 
 ## Cache
 
+### Structure
+
 * DictEntry
   - key:   string
   - value: T
@@ -49,6 +51,16 @@
 
 * Cache
   - partitions: []Dict
+
+### Architecture
+
+* |  |  string  |  list  |  set  |  sorted set  |  hash  |  |
+* |                        cache                            |
+
+* Command
+  - type: get/set/hget/hset
+  - args: key, value, partition id
+* Exec(Command) => Result
 
 
 ## Dump File
